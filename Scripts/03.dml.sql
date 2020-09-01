@@ -1,8 +1,7 @@
 INSERT ALL
-	INTO MEMBER VALUES ('¿Ãº“πÃ','somi','1234','gmd@naver.com','010-2362-5157',0,sysdate)
-	INTO MEMBER VALUES ('«œªÛø¿','sang12','1234','ha12@naver.com','010-5629-8888',1,sysdate)
-	INTO MEMBER VALUES ('±Ë¿±º˛','light','1234','youn102@naver.com','010-9999-8282',0,sysdate)
-	SELECT 1 FROM dual;
-
-SELECT * FROM MEMBER;
+	INTO MEMBER VALUES ('Ïù¥ÏÜåÎØ∏', 'somi', '1234', 'gmd@naver.com', '010-2362-5157', 0, sysdate)
+	INTO MEMBER VALUES ('ÌïòÏÉÅÏò§', 'sang12', '1234', 'ha12@naver.com', '010-5629-8888', 1, sysdate)
+	INTO MEMBER VALUES ('ÍπÄÏú§Ïäπ', 'light', '1234', 'youn104@naver.com', '010-9999-8282', 0, sysdate)
+	SELECT 1 FROM DUAL;
 	
+SELECT * FROM MEMBER;

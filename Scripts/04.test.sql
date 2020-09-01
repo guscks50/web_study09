@@ -1,16 +1,19 @@
-SELECT name,userid,pwd,email,phone,admin,JOINDATE 
-	FROM MEMBER;
+SELECT NAME, USERID, PWD, EMAIL, PHONE, ADMIN, JOINDATE
+  FROM MEMBER;
 
-SELECT name,userid,pwd,email,phone,admin,JOINDATE 
-	FROM MEMBER
-WHERE userid = 'parkgy';
+INSERT INTO MEMBER(NAME, USERID, PWD, EMAIL, PHONE, ADMIN) 
+VALUES ('Î∞ïÍ∑úÏòÅ', 'parkgy', '1234', 'pgy@gmail.com', '010-1111-2222', 0);
 
-INSERT INTO MEMBER(name,userid,pwd,email,phone,admin) values('π⁄±‘øµ','parkgy','1234','pgy@gmail.com','010-1111-2222',0);
+SELECT NAME, USERID, PWD, EMAIL, PHONE, ADMIN, JOINDATE
+  FROM MEMBER
+ WHERE USERID = 'parkgy';
 
 UPDATE MEMBER
-	SET name='πÆ√§ø¯',pwd='5678',email='mcw@gmail.com',phone='010-3333-5555',admin= 1 , JOINDATE ='2020-08-20'
-WHERE userid='parkgy';
+   SET NAME='Î¨∏Ï±ÑÏõê', PWD='5678', EMAIL='mcw@gmail.com', 
+       PHONE='010-3333-5555', ADMIN=1, JOINDATE='2020-08-20'
+ WHERE USERID = 'parkgy';
 
-DELETE 
-FROM  MEMBER
-WHERE userid='parkgy';
+DELETE FROM MEMBER WHERE USERID = 'test';
+
+-- usercheck
+SELECT PWD FROM MEMBER WHERE USERID = 'somi';
