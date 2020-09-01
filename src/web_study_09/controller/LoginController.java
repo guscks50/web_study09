@@ -46,6 +46,7 @@ public class LoginController extends HttpServlet {
     	        if (pwd.equals(resMember.getPwd())) {
     	            HttpSession session = request.getSession();
     	            session.setAttribute("loginUser", resMember);
+    	       //s     session.setMaxInactiveInterval(60*60);
     	            request.setAttribute("message", "회원 가입에 성공했습니다");
     	            url = "main.jsp";
     	        }else {
