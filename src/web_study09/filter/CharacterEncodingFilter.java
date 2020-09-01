@@ -10,37 +10,32 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
 
-/**
- * Servlet Filter implementation class CharacterEncodingFilter
- */
+
 @WebFilter(
 		urlPatterns = { "/*" }, 
 		initParams = { 
 				@WebInitParam(name = "encoding", value = "UTF-8")
 		})
 public class CharacterEncodingFilter implements Filter {
-	private String enc;
-  
-   
+    private String enc;
 
 	public void destroy() {
-		System.out.println("destroy()");
+	    System.out.println("destroy()");
 	}
 
-	
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		System.out.println("doFilter()");
-		request.setCharacterEncoding(enc);
+	       System.out.println("CharacterEncodingFilter - doFilter()");
+
+	    request.setCharacterEncoding(enc);
 		chain.doFilter(request, response);
 	}
 
-	
 	public void init(FilterConfig fConfig) throws ServletException {
-	System.out.println("init(FilterConfig fConfig)");
-		enc =fConfig.getInitParameter("encoding");
-	if(enc == null) {
-		enc = "UTF-8";
-	}
+	    System.out.println("init(FilterConfig fConfig)");
+		enc = fConfig.getInitParameter("encoding");
+		if (enc == null) {
+		    enc = "UTF-8";
+		}
 	}
 
 }
